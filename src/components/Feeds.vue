@@ -10,7 +10,7 @@
             <div class="post-details">
               <ul class="post-info">
                 <li><span>Tarih</span></li>
-                <li><a href="#" title="">Admin</a></li>
+                <li><a href="#" title="">Onur Amcanız</a></li>
               </ul>
               <h3><a href="#" title="">Haber Başlığı</a></h3>
             </div>

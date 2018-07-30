@@ -14,7 +14,7 @@
           <!--<li><a href="#" title="">İletişim</a></li>-->
           <!--</ul>&lt;!&ndash;footer-links end&ndash;&gt;-->
           <ul class="addrs-info">
-            <li><span>World</span></li>
+            <li><span></span></li>
             <li><span>info@unichaintr.com</span></li>
           </ul>
           <ul class="footer-social-links">

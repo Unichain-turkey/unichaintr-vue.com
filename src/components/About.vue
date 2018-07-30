@@ -3,57 +3,84 @@
     <div class="container">
       <div class="our-info-details">
         <div class="row">
-          <div class="col-lg-4">
-            <div class="our-info">
-              <img src="../../static/images/info-pic.png" alt="">
-              <h2>Gelecek <br />burada!</h2>
-              <p>Bizler bir grup genç ve burada<br /> geleceği tasarlıyoruz.</p>
-            </div>
-          </div>
-          <div class="col-lg-8">
+          <div class="col">
             <div class="who-we-are">
-              <h3 class="sm-title">BİZ KİMİZ</h3>
+              <h3 class="sm-title">Biz Kimiz?</h3>
               <p>
-                Yaygın inancın tersine, Lorem Ipsum rastgele sözcüklerden oluşmaz.
-                Kökleri M.Ö. 45 tarihinden bu yana klasik Latin edebiyatına kadar
-                uzanan 2000 yıllık bir geçmişi vardır.
+                Günümüzün en güncel teknolojilerinden olan blockchain teknolojisini ülke
+                olarak geriden takip etmek yerine, dümeni eline taraf olmayı hedefleyen;
+                genç, dinamik, istekli ve nitelikli üniversite öğrencilerinden oluşan,
+                tamamen gönüllü bir blockchain topluluğuyuz.
               </p>
               <p>
-                Virginia'daki Hampden-Sydney College'dan Latince profesörü Richard McClintock,
-                bir Lorem Ipsum pasajında geçen ve anlaşılması en güç sözcüklerden biri olan 'consectetur'
-                sözcüğünün klasik edebiyattaki örneklerini incelediğinde kesin bir kaynağa ulaşmıştır.
+                Amacımız teknolojiyi güncel olarak takip eden, öğrenen, öğreten ve
+                geliştiren öğrenciler yetiştirip ülkemizi bu alanda öne çıkarmaktır.
               </p>
               <h3 class="sm-title">Neler Yapıyoruz?</h3>
               <div class="our-features">
                 <div class="feature-icon">
-                  <i class="fa fa-building-o" aria-hidden="true"></i>
+                  <i class="fa fa-edit" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
                   <h3>Planlıyoruz</h3>
-                  <p>Bizler bir proje geliştirmeden önce oturup güzelce bir planlıyoruz.</p>
-                </div><!--feature-info end-->
-              </div><!--our-features end-->
-              <div class="our-features">
-                <div class="feature-icon">
-                  <i class="fa fa-industry" aria-hidden="true"></i>
-                </div><!--feature-icon end-->
-                <div class="feature-info">
-                  <h3>İnşaa Ediyoruz</h3>
                   <p>
-                    Bir şeyi planladıktan sonra onu bir güzel inşaa ediyoruz.
-                    Bu süreçte en büyük de ilham kaynağımız ekip çalşmasıdır.
+                    Hiçbir maddi çıkar beklemeden, Türkiye’nin dört bir yanındaki 10’un
+                    üzerinde üniversiteden; yazılım, finans, hukuk vb. alanlarda
+                    blockchain ile ilgili genç ve dinamik öğrencilerden oluşan
+                    topluluğumuzun kapsama alanını her geçen gün büyütüyoruz. Çeşitli
+                    şehirlerden toplanan arkadaşlarımızla her hafta çevrimiçi
+                    toplantılar yaparak birbirimizi bilgilendiriyor, kararlar alıyoruz.
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->
               <div class="our-features">
                 <div class="feature-icon">
-                  <i class="fa fa-xing" aria-hidden="true"></i>
+                  <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
-                  <h3>Halka açık yayınlıyoruz. </h3>
+                  <h3>Eğitiyoruz</h3>
                   <p>
-                    Ürettiğimiz her projeyi halka açık olarak yayınlıyoruz.
-                    Bizler topluluğumuzu halktan seçip üretimlerimizi halka açık yapıyoruz.
+                  Gönüllüler olarak birleştiğimiz bu toplulukta bu teknolojiye ilgi
+                  duyan, bu konuda bilgi almak isteyen her öğrenciye yardım etmeye
+                  çalışıyoruz.
+                  </p>
+                </div><!--feature-info end-->
+              </div><!--our-features end-->
+              <div class="our-features">
+                <div class="feature-icon">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                </div><!--feature-icon end-->
+                <div class="feature-info">
+                  <h3>Geliştiriyoruz</h3>
+                  <p>
+                    Hem kendimizi geliştirmek hem de blockchain ekosistemine katkı
+                    sağlamak için bu alanda projeler geliştiriyoruz.
+                  </p>
+                </div><!--feature-info end-->
+              </div><!--our-features end-->
+              <div class="our-features">
+                <div class="feature-icon">
+
+                  <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div><!--feature-icon end-->
+                <div class="feature-info">
+                  <h3>İçerik Üretiyoruz</h3>
+                  <p>
+                    Blockchain alanında Türkçe kaynak eksikliğini hem yabancı kaynakları
+                    Türkçeleştirerek hem de özgün Türkçe içerikler üreterek gidermeye
+                    çalışıyoruz.
+                  </p>
+                </div><!--feature-info end-->
+              </div><!--our-features end-->
+              <div class="our-features">
+                <div class="feature-icon">
+                  <i class="fa fa-rocket" aria-hidden="true"></i>
+                </div><!--feature-icon end-->
+                <div class="feature-info">
+                  <h3>Destekliyoruz</h3>
+                  <p>
+                    Üniversitelerdeki blockchain kulüpleri ile iletişim halinde
+                    olarak onların ihtiyaçları doğrultusunda teknik destek sağlıyoruz.
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->

@@ -8,12 +8,6 @@
         <div class="mobile-menu-btn">
           <a href="#" title="" class="open-menu"><i class="fa fa-bars"></i></a>
         </div><!--mobile-menu-btn end-->
-        <div class="select-language">
-          <ul>
-            <li class="active"><a href="#" title="">TR</a></li>
-            <li><a href="#" title="">ENG</a></li>
-          </ul>
-        </div><!--select-language end-->
         <nav>
           <ul>
             <li><a class="active" href="#" title="">Ana Sayfa</a></li>
