@@ -5,6 +5,8 @@ import Contact from '@/components/Contact'
 import Index from '@/components/Index'
 import ProjectDetail from '@/components/ProjectDetail'
 import Projects from '@/components/Projects'
+import Admin from '@/components/sponsor/Admin'
+
 
 Vue.use(Router)
 
@@ -15,6 +17,11 @@ export default new Router({
       path: '/',
       name: 'Index',
       component: Index
+    },
+    {
+      path: '/admin',
+      name: 'Admin',
+      component: Admin
     },
     {
       path: '/whoIam',

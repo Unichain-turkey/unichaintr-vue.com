@@ -84,9 +84,14 @@
       <projects></projects>
     </section>
 
+
+
     <section id="supports">
       <sponsors></sponsors>
+      <br>
+      <besponsor></besponsor>
     </section>
+
 
     <section id="latest">
       <feeds></feeds>
@@ -99,25 +104,33 @@
 </template>
 
 <script>
-  import About from  '@/components/About'
-  import Stats from '@/components/Stats'
-  import Contact from '@/components/Contact'
-  import Feeds from '@/components/Feeds'
-  import Footer from '@/components/Footer'
-  import Projects from '@/components/Projects'
-  import Sponsors from '@/components/Sponsors'
-  export default {
-    name: "Index",
-    components: {
-      about: About,
-      stats: Stats,
-      contact: Contact,
-      feeds: Feeds,
-      appFooter: Footer,
-      projects: Projects,
-      sponsors: Sponsors,
-    }
+import About from  '@/components/About'
+import Stats from '@/components/Stats'
+import Contact from '@/components/Contact'
+import Feeds from '@/components/Feeds'
+import Footer from '@/components/Footer'
+import Projects from '@/components/Projects'
+import Sponsors from '@/components/sponsor/Sponsors'
+import Sponsorsv2 from '@/components/Sponsors'
+import BeingSponsor from '@/components/sponsor/BeingSponsor.vue'
+import store from '@/store'
+
+window.store=store;
+
+export default {
+  name: "Index",
+  components: {
+    about: About,
+    stats: Stats,
+    contact: Contact,
+    feeds: Feeds,
+    appFooter: Footer,
+    projects: Projects,
+    sponsors: Sponsors,
+    sponsortsv2:Sponsorsv2,
+    beingsponsor:BeingSponsor
   }
+}
 </script>
 
 <style scoped>
