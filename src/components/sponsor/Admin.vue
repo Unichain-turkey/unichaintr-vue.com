@@ -1,8 +1,7 @@
 <template>
-  <div class="container">
+  <div class="block">
     <pending></pending>
   </div>
-
 
 </template>
 
@@ -17,5 +16,6 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>

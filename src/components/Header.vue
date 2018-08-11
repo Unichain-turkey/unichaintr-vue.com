@@ -3,7 +3,7 @@
     <header class="pb full stick">
       <div class="header-bar">
         <div class="logo">
-          <a href="#" title=""><img src="../../static/images/logo.png" alt=""></a>
+          <a href="/" title=""><img src="../../static/images/logo.png" alt=""></a>
         </div><!--logo end-->
         <div class="mobile-menu-btn">
           <a href="#" title="" class="open-menu"><i class="fa fa-bars"></i></a>

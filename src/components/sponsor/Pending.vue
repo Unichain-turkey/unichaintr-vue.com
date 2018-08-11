@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pend">
 
     <table class="table table-striped">
       <thead>
@@ -93,5 +93,11 @@
 .imgContainer {
   height: 200px;
   weight: 150px;
+}
+
+.pend {
+  background-color: #ffffff;
+  width: 100%;
+  position: absolute;
 }
 </style>

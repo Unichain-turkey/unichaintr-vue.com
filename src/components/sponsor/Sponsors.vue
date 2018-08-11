@@ -1,49 +1,41 @@
 <template>
+  <div class="container p-3 ">
+    <carousel :perPage="perPage"
+              paginationColor="#022d46"
+              :paginationSize="paginationSize"
+              :paginationPadding="paginationPadding"
+              :loop="loop" :navigationEnabled="navigationEnabled" >
 
-  <div>
-    <carousel>
-      <slide>
-        Slide 1 Content
+
+      <slide v-for="sponsor in sponsors" v-bind:key="sponsors['url']">
+        <a :href="sponsor['url']"  target="_blank" class="link">
+        <img class="imgContainer" :src="getImageUrl(sponsor['imageHash'])" alt="Lights" style="width:100%">
+        </a>
       </slide>
-      <slide>
-        Slide 2 Content
-      </slide>
+
     </carousel>
   </div>
-<!--
-  <div class="block no-padding">
-    <div class="partners-section">
 
-      <ul class="partner-carousel" v-for="sponsor in sponsors" >
-
-        <li><a :href="sponsor['url']" class="link">
-          <img :src="getImageUrl(sponsor['imageHash'])" alt="Lights" style="width:100%">
-        </a></li>
-
-      </ul>
-
-    </div><!--partners-section end
-  </div>
--->
 </template>
 
 
 <script>
 
-import store from '@/store/'
 import sponsorJson from '@/assets/contracts/Sponsor.json'
-function getSposnsor (address) {
-  let _web3 = store.getters.web3InstanceGetter()
-  return new _web3.eth.Contract(sponsorJson.abi, address)
-}
+
 import { Carousel, Slide } from 'vue-carousel';
 
 export default {
-
   name: "Sponsors",
   data () {
     return {
-      sponsors: []
+      sponsors: [],
+      paginationSize:10,
+      paginationPadding:10,
+      loop:false,
+      navigationEnabled:true,
+      perPage:3
+
     }
   },
   methods: {
@@ -62,7 +54,7 @@ export default {
     _contract.getPastEvents('beenSponsor', { fromBlock: 0, toBlock: 'latest' }, function(error, events) {
       events.forEach((element) => {
         var address=element.returnValues[0]
-        var _sponsor = getSposnsor(address)
+        var _sponsor = this.getSposnsor(address)
         _sponsor.methods.getSponsor().call().then(function (val) {
           console.log("Here",val)
           self.sponsors.push({
@@ -74,11 +66,28 @@ export default {
         })
 
       });
-    })
+    }.bind(this))
+  },
+  methods:{
+    getSposnsor:function (address) {
+      let _web3 = this.$store.getters.web3InstanceGetter()
+      return new _web3.eth.Contract(sponsorJson.abi, address)
+    },
+    getImageUrl: function (hash) {
+      console.log(hash)
+      return 'https://gateway.ipfs.io/ipfs/' + hash + '/'
+    }
   }
 }
 </script>
 
 <style scoped>
+.imgContainer {
+  display: block;
+  max-width:180px;
+  max-height:180px;
+  width: auto;
+  height: auto;
+ }
 
 </style>

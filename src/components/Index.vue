@@ -85,11 +85,12 @@
     </section>
 
 
-
-    <section id="supports">
+    <section >
       <sponsors></sponsors>
-      <br>
-      <besponsor></besponsor>
+    </section>
+
+    <section >
+      <beingsponsor></beingsponsor>
     </section>
 
 
