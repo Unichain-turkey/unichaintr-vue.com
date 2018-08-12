@@ -1,12 +1,12 @@
 <template>
 
-  <div class="container p-3">
+  <div class="container" >
     <div class="progress" v-if="pending">
       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
     </div>
     <hr/>
     <!-- Button trigger modal -->
-    <button type="button " class="btn btn-outline-info btn-block" data-toggle="modal" data-target="#createSponsorshipForm">
+    <button type="button" class="btn btn-outline-info btn-block " data-toggle="modal" data-target="#createSponsorshipForm">
       SPONSOR OL
     </button>
 

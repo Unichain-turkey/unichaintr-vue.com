@@ -1,8 +1,8 @@
 <template>
 
-  <div class="container p-3 text-center ">
+  <div class="container pt-3 text-center ">
   <h3 class="sm-title">SPONSORLARIMIZ</h3>
-  <div class="container p-3 ">
+  <div class="container  ">
     <carousel :perPage="perPage"
               paginationColor="#022d46"
               :paginationSize="paginationSize"
@@ -59,7 +59,6 @@ export default {
         var address=element.returnValues[0]
         var _sponsor = this.getSposnsor(address)
         _sponsor.methods.getSponsor().call().then(function (val) {
-          console.log("Here",val)
           self.sponsors.push({
             "name":val[0],
             "url":val[1],

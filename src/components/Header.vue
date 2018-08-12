@@ -13,7 +13,6 @@
             <li><a class="active" href="#" title="">Ana Sayfa</a></li>
             <li><a href="#whoIam" title="">Hakkımızda</a></li>
             <li><a href="#projects" title="">Projeler</a></li>
-            <li><a href="#latest" title="">Gelişmeler</a></li>
             <li><a href="#knock-knock" title="">İletişim</a></li>
           </ul>
         </nav><!--nav end-->
@@ -26,7 +25,6 @@
         <li><a class="active" href="#" title="">Ana Sayfa</a></li>
         <li><a href="#whoIam" title="">Hakkımızda</a></li>
         <li><a href="#projects" title="">Projeler</a></li>
-        <li><a href="#latest" title="">Gelişmeler</a></li>
         <li><a href="#knock-knock" title="">İletişim</a></li>
       </ul>
     </div><!--responsive-mobile-menu end-->

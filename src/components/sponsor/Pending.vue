@@ -37,12 +37,7 @@
     },
     methods: {
       acceptButton(e) {
-        console.log("adadasd")
-        console.log(e);
-
         let _contract = this.$store.getters.contractInstance();
-        console.log(_contract);
-
         _contract.methods.confirm(e).send({from: this.$store.getters.currentAddress})
           .then(function(receipt){
             console.log(receipt)
@@ -60,7 +55,6 @@
           });
       },
       getImageUrl: function (hash) {
-        console.log(hash)
         return 'https://gateway.ipfs.io/ipfs/' + hash + '/'
       }
     },

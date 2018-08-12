@@ -10,7 +10,7 @@ import Admin from '@/components/sponsor/Admin'
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   routes: [
     {
@@ -21,7 +21,10 @@ export default new Router({
     {
       path: '/admin',
       name: 'Admin',
-      component: Admin
+      component: Admin,
+      meta: {
+        is_admin: true
+      }
     },
     {
       path: '/whoIam',
@@ -46,3 +49,18 @@ export default new Router({
     { path: '*', redirect: '/hi' }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if(to.matched.some(record => record.meta.is_admin)) {
+    console.log("Check is  it admin")
+    next()
+
+  }
+  else {
+    next()
+  }
+});
+
+
+export default router;
+

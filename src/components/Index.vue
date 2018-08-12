@@ -66,17 +66,18 @@
 
 
     <section >
-      <sponsors></sponsors>
-    </section>
+      <div class="container">
+      <div class="row">
 
-    <section >
+      <sponsors ></sponsors>
+      </div>
+      <div class="row">
       <beingsponsor></beingsponsor>
+      </div>
+      </div>
     </section>
 
 
-    <section id="latest">
-      <feeds></feeds>
-    </section>
 
     <section id="knock-knock">
       <contact></contact>
@@ -88,7 +89,6 @@
 import About from  '@/components/About'
 import Stats from '@/components/Stats'
 import Contact from '@/components/Contact'
-import Feeds from '@/components/Feeds'
 import Footer from '@/components/Footer'
 import Projects from '@/components/Projects'
 import Sponsors from '@/components/sponsor/Sponsors'
@@ -104,7 +104,6 @@ export default {
     about: About,
     stats: Stats,
     contact: Contact,
-    feeds: Feeds,
     appFooter: Footer,
     projects: Projects,
     sponsors: Sponsors,
