@@ -18,7 +18,6 @@ Vue.filter('toWei', function (value) {
 
 Vue.use(VueCarousel);
 
-
 ;(async () => {
   try {
     await store.dispatch('setContract')

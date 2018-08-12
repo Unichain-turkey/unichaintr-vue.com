@@ -1,6 +1,6 @@
 <template>
 
-  <div class="container pt-3 text-center ">
+  <div class="container pt-3 text-center  " >
   <h3 class="sm-title">SPONSORLARIMIZ</h3>
   <div class="container  ">
     <carousel :perPage="perPage"
@@ -11,9 +11,24 @@
 
 
       <slide v-for="sponsor in sponsors" v-bind:key="sponsors['url']">
-        <a :href="sponsor['url']"  target="_blank" class="link">
-        <img class="imgContainer" :src="getImageUrl(sponsor['imageHash'])" alt="Lights" style="width:100%">
-        </a>
+
+        <div class="card" style="width: 18rem;">
+          <a :href="sponsor['url']"  target="_blank" class="link">
+          <img class="card-img-top p-1" :src="getImageUrl(sponsor['imageHash'])"  alt="Card image cap">
+          <div class="card-body p-1">
+            <h5  class="" style="color: black">{{sponsor['name']}}</h5>
+
+          </div>
+          </a>
+        </div>
+
+
+
+
+
+
+
+
       </slide>
 
     </carousel>
@@ -35,7 +50,7 @@ export default {
       sponsors: [],
       paginationSize:10,
       paginationPadding:10,
-      loop:false,
+      loop:true,
       navigationEnabled:true,
       perPage:3
 

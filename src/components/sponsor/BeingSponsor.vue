@@ -90,15 +90,14 @@ export default {
         this.imageHash,
         this.duration
       ).send(
-        {value: this.$options.filters.toWei('1'), from: _base})
+        {value: this.$options.filters.toWei('1') * this.duration, from: _base})
       this.pending = true
       temp.then(function (error, value) {
 
         if(!error){
           alert(error)
         }else{
-
-          alert("Your request is sended ")
+          alert("Your request of being sponsorships is sended !")
           window.location.href = "/"
         }
         this.pending = false
@@ -117,7 +116,6 @@ export default {
           .then((response) => {
             this.ipfsPin()
             this.imageHash = response[0].hash
-            console.log(response[0].hash)
           }).catch((err) => {
           console.error(err)
         })
@@ -125,16 +123,14 @@ export default {
       reader.readAsArrayBuffer(this.image)
     },
     uploadImage () {
-      console.log('Hash of image', this.imageHash)
-      if (this.imageHash != null) {
-        console.log("Okey")
 
+      if (this.imageHash != null) {
+        console.log('Hash of image', this.imageHash)
       } else {
         alert('Please fill the all fields')
       }
     },
     ipfsPin(){
-
       let ipfs = this.$store.getters.getIpfs
       ipfs.pin.add(this.imageHash, function (err)  {
         err==null ? console.log("Succesfully pinned the image"):console.log("Failed pinnig image to repo")

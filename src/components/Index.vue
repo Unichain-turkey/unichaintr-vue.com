@@ -14,7 +14,7 @@
                 <!-- LAYERS -->
                 <!-- LAYER NR. 1 -->
                 <div class="tp-caption lyr2 tp-resizeme" id="slide-1648-layer-5" data-x="left" data-hoffset="0" data-y="center" data-voffset="-135" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                     data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-start="200" data-splitin="chars" data-splitout="none" data-elementdelay="0.04" style="">"UniChain"
+                     data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-start="200" data-splitin="chars" data-splitout="none" data-elementdelay="0.04" style="">UniChain
                 </div>
                 <!-- LAYER NR. 2 -->
                 <div class="tp-caption lyr1 tp-resizeme" id="slide-1648-layer-6" data-x="left" data-hoffset="0" data-y="center" data-voffset="0" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
@@ -65,16 +65,17 @@
     </section>
 
 
-    <section >
-      <div class="container">
-      <div class="row">
+    <section  class=" p-1">
+      <div class="container p-1 ">
+        <div class="row ">
 
-      <sponsors ></sponsors>
+        <sponsors ></sponsors>
+        </div>
+        <div class="row p-4">
+        <beingsponsor></beingsponsor>
+        </div>
       </div>
-      <div class="row">
-      <beingsponsor></beingsponsor>
-      </div>
-      </div>
+
     </section>
 
 

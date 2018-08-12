@@ -1,6 +1,5 @@
 <template>
-  <div class="contact-info-sec">
-					<div>
+
 						<div class="cntct-details">
 							<div class="row">
 								<div class="col-lg-6">
@@ -58,8 +57,7 @@
 								</div>
 							</div>
 						</div><!--cntct-details end-->
-					</div>
-				</div>
+
 </template>
 
 <script>
