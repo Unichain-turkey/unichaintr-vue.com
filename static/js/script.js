@@ -2,14 +2,14 @@ $(window).on("load", function() {
     "use strict";
 
 
-    // ============== Sticky Header Function ============ 
+    // ============== Sticky Header Function ============
 
 
     $(window).on("scroll", function() {
         var header_height = $("header").innerHeight();
-        if ($(this).scrollTop() > 1){  
+        if ($(this).scrollTop() > 1){
             $('header.stick').addClass("sticky animated slideInDown");
-            
+
           }
           else{
             $('header.stick').removeClass("sticky animated slideInDown");
@@ -44,14 +44,18 @@ $(window).on("load", function() {
     $(".tr-news-img").css({
       "height": tr_height
     });
-    };  
+    };
 
     // =============== Locations Tabs Functionality =================
+
+
+
 
     $('.locations-list ul li').on("click", function(){
         var tab_id = $(this).attr('data-tab');
         $('.locations-list ul li').removeClass('current');
         $('.location-img').removeClass('current');
+        $('.locations-info').removeClass('current');
         $(this).addClass('current animated fadeIn');
         $("#"+tab_id).addClass('current animated fadeIn');
     });
@@ -93,8 +97,8 @@ $(window).on("load", function() {
     $("footer").css({
         "height": footer_height
     });
-    
-    // ============ PAGE LOADER ============= 
+
+    // ============ PAGE LOADER =============
 
     $('.page-loading').fadeOut();
 

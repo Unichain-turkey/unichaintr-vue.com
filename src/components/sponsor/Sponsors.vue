@@ -1,4 +1,7 @@
 <template>
+
+  <div class="container p-3 text-center ">
+  <h3 class="sm-title">SPONSORLARIMIZ</h3>
   <div class="container p-3 ">
     <carousel :perPage="perPage"
               paginationColor="#022d46"
@@ -15,7 +18,7 @@
 
     </carousel>
   </div>
-
+  </div>
 </template>
 
 
