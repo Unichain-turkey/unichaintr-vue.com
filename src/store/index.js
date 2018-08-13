@@ -42,7 +42,6 @@ export default new Vuex.Store({
       state.web3Instance = result.web3
     },
     SETCONTRACTINSTANCE (state, result) {
-      console.log(result)
       state.contractInstance = () => result
     },
     SETSPONSORCOUNT (state, result) {
@@ -62,11 +61,11 @@ export default new Vuex.Store({
       async  createWeb3 ({ commit }) {
       let result = await web3Instance;
       commit('CREATEWEB3', result)
+
     },
     async setContract ({ commit }) {
       let result = await contractInstance;
       commit('SETCONTRACTINSTANCE', result)
-
     },
      ipfsSet ({ commit }) {
       commit('SETIPFS',ipfs)

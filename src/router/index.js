@@ -6,6 +6,7 @@ import Index from '@/components/Index'
 import ProjectDetail from '@/components/ProjectDetail'
 import Projects from '@/components/Projects'
 import Admin from '@/components/sponsor/Admin'
+import store from '@/store/'
 
 
 Vue.use(Router)

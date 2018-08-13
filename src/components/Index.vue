@@ -33,8 +33,6 @@
                     <div class="row">
                       <div class="col-sm">
 
-
-
                         <a href="https://medium.com/unichain-tr" target="_blank"><button type="button" class="btn btn-info btn-lg" style="margin:auto; display:block;">Medium Tanıtım Yazısı</button></a>
                       </div>
                     </div>
@@ -107,6 +105,24 @@ export default {
     sponsortsv2:Sponsorsv2,
     beingsponsor:BeingSponsor
   },
+  mounted(){
+    let contract=this.$store.getters.contractInstance()
+    if (this.$store.getters.currentAddress!="Null"){
+      const result =contract.methods.isAdmin().call({from: this.$store.getters.currentAddress})
+      console.log("Burdayim")
+      result.then(function (value, error) {
+        if (typeof(error )== 'undefined') {
+          console.log(value)
+          localStorage.setItem("isAdmin", value);
+        }
+      });
+    }
+    else{
+      console.log("Adres daha  edilmedi")
+    }
+
+
+  }
 
 }
 </script>

@@ -14,11 +14,12 @@ Vue.filter('toWei', function (value) {
 
 Vue.use(VueCarousel);
 
-(async () => {
+;(async () => {
   try {
-    await store.dispatch('setContract')
-    //await store.dispatch('createWeb3')
-    store.dispatch('ipfsSet')
+    await store.dispatch('ipfsSet');
+    await store.dispatch('setContract');
+    store.dispatch('createWeb3');
+
   } catch (e) {
     console.log('uff', e)
   } finally {
