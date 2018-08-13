@@ -18,7 +18,7 @@ Vue.use(VueCarousel);
   try {
     await store.dispatch('ipfsSet');
     await store.dispatch('setContract');
-    await store.dispatch('createWeb3');
+    store.dispatch('createWeb3');
 
   } catch (e) {
     console.log('uff', e)
