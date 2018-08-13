@@ -17,18 +17,9 @@
           <img class="card-img-top p-1" :src="getImageUrl(sponsor['imageHash'])"  alt="Card image cap">
           <div class="card-body p-1">
             <h5  class="" style="color: black">{{sponsor['name']}}</h5>
-
           </div>
           </a>
         </div>
-
-
-
-
-
-
-
-
       </slide>
 
     </carousel>
@@ -91,7 +82,6 @@ export default {
       return new _web3.eth.Contract(sponsorJson.abi, address)
     },
     getImageUrl: function (hash) {
-      console.log(hash)
       return 'https://gateway.ipfs.io/ipfs/' + hash + '/'
     }
   }

@@ -1,5 +1,3 @@
-
-import AxiosDefaults from 'axios/lib/defaults'
 import Vue from 'vue'
 import VueCarousel from 'vue-carousel';
 import web3 from 'web3'
@@ -7,8 +5,6 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-AxiosDefaults.xsrfCookieName = "csrftoken"
-AxiosDefaults.xsrfHeaderName = "X-CSRFToken"
 
 Vue.config.productionTip = false
 
@@ -18,11 +14,11 @@ Vue.filter('toWei', function (value) {
 
 Vue.use(VueCarousel);
 
-;(async () => {
+(async () => {
   try {
     await store.dispatch('setContract')
-    await store.dispatch('createWeb3')
-    await store.dispatch('ipfsSet')
+    //await store.dispatch('createWeb3')
+    store.dispatch('ipfsSet')
   } catch (e) {
     console.log('uff', e)
   } finally {

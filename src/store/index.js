@@ -3,8 +3,18 @@ import Vuex from 'vuex'
 
 import { ipfs ,web3Instance, contractInstance } from '@/common/coreinterface.js'
 
-Vue.use(Vuex)
 
+
+var NETWORKS= {
+     1: 'Main Net',
+     2: 'Deprecated Morden test network',
+     3: 'Ropsten test network',
+     4: 'Rinkeby test network',
+    42: 'Kovan test network',
+  4447: 'Truffle Develop Network',
+  5777: 'Ganache Blockchain'
+};
+Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     isInjected: false,
@@ -15,29 +25,24 @@ export default new Vuex.Store({
     error: null,
     contractInstance: null,
     ipfsApi: null,
-    NETWORKS: {
-      '1': 'Main Net',
-      '2': 'Deprecated Morden test network',
-      '3': 'Ropsten test network',
-      '4': 'Rinkeby test network',
-      '42': 'Kovan test network',
-      '4447': 'Truffle Develop Network',
-      '5777': 'Ganache Blockchain'
-    },
+    networkName:"",
     sponsorCount: 0,
     activeSponsorCount: 0,
     totalValue: 0
   },
-  strict: true, // don't leave it true on production
+  strict: true,
   mutations: {
     CREATEWEB3 (state, result) {
+      console.log(result)
       state.balance = result.balance
-      state.coinbase = result.coinbase
+      state.coinbase = result.coinbase[0]
       state.networkId = result.networkId
-      state.isInjected = result.isInjected
+      state.networkName = NETWORKS[result.networkId]
+      state.isInjected = result.injectedWeb3
       state.web3Instance = result.web3
     },
     SETCONTRACTINSTANCE (state, result) {
+      console.log(result)
       state.contractInstance = () => result
     },
     SETSPONSORCOUNT (state, result) {
@@ -54,21 +59,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    createWeb3 ({ commit }) {
-      web3Instance.then(value => {
-        commit('CREATEWEB3', value)
-      }, reason => {
-        console.log(reason)
-      })
+      async  createWeb3 ({ commit }) {
+      let result = await web3Instance;
+      commit('CREATEWEB3', result)
     },
-    setContract ({ commit }) {
-      contractInstance.then(value => {
-        commit('SETCONTRACTINSTANCE', value)
-      }, reason => {
-        console.log(reason)
-      })
+    async setContract ({ commit }) {
+      let result = await contractInstance;
+      commit('SETCONTRACTINSTANCE', result)
+
     },
-    ipfsSet ({ commit }) {
+     ipfsSet ({ commit }) {
       commit('SETIPFS',ipfs)
     },
     setSponsorCount ({ commit }, result) {
@@ -91,7 +91,7 @@ export default new Vuex.Store({
     },
     currentAddress: state => {
       if ((state.coinbase) !== null) {
-        return state.coinbase[0]
+        return state.coinbase
       } else {
         return 'Null'
       }

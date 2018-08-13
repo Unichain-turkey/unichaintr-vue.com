@@ -24,7 +24,21 @@ export default {
   components: {
     appFooter: Footer,
     appHeader: Header,
+  },
+  mounted(){
+    /*
+    let contract=this.$store.getters.contractInstance()
+    const result =contract.methods.isAdmin().call({from: this.$store.getters.currentAddress})
+    result.then(function (value, error) {
+      if (error == null) {
+        console.log(value)
+        localStorage.setItem("isAdmin", value);
+      }
+    });
+    */
   }
+
+
 }
 </script>
 

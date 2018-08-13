@@ -78,8 +78,6 @@
 
     </section>
 
-
-
     <section id="knock-knock">
       <contact></contact>
     </section>
@@ -95,9 +93,7 @@ import Projects from '@/components/Projects'
 import Sponsors from '@/components/sponsor/Sponsors'
 import Sponsorsv2 from '@/components/Sponsors'
 import BeingSponsor from '@/components/sponsor/BeingSponsor.vue'
-import store from '@/store'
 
-window.store=store;
 
 export default {
   name: "Index",
@@ -110,7 +106,8 @@ export default {
     sponsors: Sponsors,
     sponsortsv2:Sponsorsv2,
     beingsponsor:BeingSponsor
-  }
+  },
+
 }
 </script>
 
