@@ -118,7 +118,7 @@ export default {
       });
     }
     else{
-      console.log("Adres daha  edilmedi")
+      console.log("Not yet")
     }
 
 
