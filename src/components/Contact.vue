@@ -81,7 +81,6 @@ export default {
         url: 'http://46.101.182.159:3000/contact',
         data: {name: this.name, email: this.email, subject: this.subject, message: this.message},
         headers: {
-          'Access-Control-Allow-Origin': '*',
           'Content-Type': 'application/json',
         }
       })
