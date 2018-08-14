@@ -66,8 +66,7 @@ app.get('/mediumDaily',function(req, res) {
 app.post('/contact',function(req,res){
   console.log(req.body)
   if (ipCheck(req)){
-    let req=req.body
-    saveLog(req)
+    saveLog(req.body)
     res.end("Done");
   }
   else{
