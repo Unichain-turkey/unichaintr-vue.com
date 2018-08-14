@@ -1,9 +1,7 @@
-
-
-
+var cors = require('cors')
 var fs = require('fs');
-const express = require('express');
 var bodyParser = require('body-parser')
+const express = require('express');
 
 
 
@@ -16,7 +14,7 @@ app.use( bodyParser.json());
 
 var ipList = {};
 
-app.get('/mediumDaily', function(request, response) {
+app.get('/mediumDaily',cors(), function(request, response) {
   var request = require('request');
   var https = require('https');
   var parseString = require('xml2js').parseString;
@@ -62,14 +60,12 @@ app.get('/mediumDaily', function(request, response) {
 });
 
 
-app.post('/contact',function(request,response){
-
+app.post('/contact',cors(),function(request,response){
   console.log(request.body)
   if (ipCheck(request)){
     let req=request.body
     saveLog(request)
     response.end("Done");
-
   }
 });
 app.get('/', function (req, res) {
