@@ -10,7 +10,7 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal fade  pt-5 m-5" id="createSponsorshipForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade  pt-4 m-5" id="createSponsorshipForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -77,7 +77,7 @@ export default {
       sponsorUrl: '',
       imageHash: '',
       duration: null,
-      deployedContract: this.$store.getters.contractInstance(),
+      contract: this.$store.getters.contractInstance(),
       pending: false,
       image: null
     }
@@ -85,7 +85,7 @@ export default {
   methods: {
     createSponsorship () {
       let _base = store.getters.currentAddress
-      const temp = this.deployedContract.methods.beSponsor(
+      const temp = this.contract.methods.beSponsor(
         this.sponsorName,
         this.sponsorUrl,
         this.imageHash,
@@ -130,6 +130,7 @@ export default {
       }
     },
     ipfsPin(){
+      console.log(this.image)
       let ipfs = this.$store.getters.getIpfs
       ipfs.pin.add(this.imageHash, function (err)  {
         err==null ? console.log("Succesfully pinned the image on ipfs"):console.log("Failed pinnig image to repo")

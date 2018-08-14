@@ -53,9 +53,12 @@ let router = new Router({
 
 router.beforeEach((to, from, next) => {
   if(to.matched.some(record => record.meta.is_admin)) {
-
-    next()
-
+    if(localStorage.getItem("isAdmin")=="true"){
+      next()
+    }
+    else{
+      next("/")
+    }
   }
   else {
     next()

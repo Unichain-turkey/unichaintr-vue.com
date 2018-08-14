@@ -89,7 +89,6 @@ import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
 import Projects from '@/components/Projects'
 import Sponsors from '@/components/sponsor/Sponsors'
-import Sponsorsv2 from '@/components/Sponsors'
 import BeingSponsor from '@/components/sponsor/BeingSponsor.vue'
 
 
@@ -102,30 +101,35 @@ export default {
     appFooter: Footer,
     projects: Projects,
     sponsors: Sponsors,
-    sponsortsv2:Sponsorsv2,
     beingsponsor:BeingSponsor
   },
   mounted(){
-    let contract=this.$store.getters.contractInstance()
     if (this.$store.getters.currentAddress!="Null"){
-      const result =contract.methods.isAdmin().call({from: this.$store.getters.currentAddress})
-      console.log("Burdayim")
+      const result =this.$store.getters.contractInstance().methods.isAdmin().call({from: this.$store.getters.currentAddress})
       result.then(function (value, error) {
         if (typeof(error )== 'undefined') {
-          console.log(value)
+          console.log("Admin mode : ",value)
           localStorage.setItem("isAdmin", value);
         }
       });
     }
     else{
-      console.log("Not yet")
+      setTimeout(function () { this.init() }.bind(this) , 2100)
+    }
+  },
+  methods:{
+    init:function () {
+      const result =this.$store.getters.contractInstance().methods.isAdmin().call({from: this.$store.getters.currentAddress})
+      result.then(function (value, error) {
+        if (typeof(error )== 'undefined') {
+          console.log("Admin mode -> ",value)
+          localStorage.setItem("isAdmin", value);
+        }
+      });
+
     }
 
-
-
-
   }
-
 }
 </script>
 

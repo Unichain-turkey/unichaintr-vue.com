@@ -3,8 +3,6 @@ import Vuex from 'vuex'
 
 import { ipfs ,web3Instance, contractInstance } from '@/common/coreinterface.js'
 
-
-
 var NETWORKS= {
      1: 'Main Net',
      2: 'Deprecated Morden test network',
@@ -81,8 +79,8 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    web3InstanceGetter: state => {
-      return state.web3Instance
+    web3: state => {
+      return state.web3Instance()
     },
     balance: state => {
       return (state.balance / 1000000000000000000).toFixed(4)
