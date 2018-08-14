@@ -1,5 +1,4 @@
 <template>
-
   <div class="container" >
     <div class="progress" v-if="pending">
       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%"></div>
@@ -11,11 +10,11 @@
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="createSponsorshipForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
+    <div class="modal fade  pt-5 m-5" id="createSponsorshipForm" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Sponsorship Form</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Sponsorluk  Başvuru Formu</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -63,6 +62,8 @@
     </div>
   </div>
 
+
+
 </template>
 
 <script>
@@ -97,7 +98,7 @@ export default {
         if(!error){
           alert(error)
         }else{
-          alert("Your request of being sponsorships is sended !")
+          alert("Your request of being sponsorships is received !")
           window.location.href = "/"
         }
         this.pending = false
@@ -108,7 +109,6 @@ export default {
     },
     onUpload () {
       let ipfs = this.$store.getters.getIpfs
-      console.log(ipfs)
       let reader = new window.FileReader()
       reader.onload = function (e) {
         let buffer = Buffer.from(reader.result)
@@ -123,7 +123,6 @@ export default {
       reader.readAsArrayBuffer(this.image)
     },
     uploadImage () {
-
       if (this.imageHash != null) {
         console.log('Hash of image', this.imageHash)
       } else {
@@ -133,7 +132,7 @@ export default {
     ipfsPin(){
       let ipfs = this.$store.getters.getIpfs
       ipfs.pin.add(this.imageHash, function (err)  {
-        err==null ? console.log("Succesfully pinned the image"):console.log("Failed pinnig image to repo")
+        err==null ? console.log("Succesfully pinned the image on ipfs"):console.log("Failed pinnig image to repo")
 
       })
     }

@@ -64,9 +64,9 @@
 </template>
 
 <script>
-    export default {
+export default {
         name: "Feeds"
-    }
+}
 </script>
 
 <style scoped>

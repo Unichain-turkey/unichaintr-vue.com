@@ -33,7 +33,6 @@ export default new Vuex.Store({
   strict: true,
   mutations: {
     CREATEWEB3 (state, result) {
-      console.log(result)
       state.balance = result.balance
       state.coinbase = result.coinbase[0]
       state.networkId = result.networkId
