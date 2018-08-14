@@ -60,6 +60,7 @@
 </template>
 
 <script>
+
 import axios from 'axios';
 export default {
   name: "Contact",
@@ -74,11 +75,15 @@ export default {
   methods: {
     contactUs() {
       console.log("Here")
+
       const request = axios({
         method: 'post',
         url: 'http://46.101.182.159:3000/contact',
         data: {name: this.name, email: this.email, subject: this.subject, message: this.message},
-        headers: {'Access-Control-Allow-Origin': '*',"content-type": "application/json"}
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json',
+        }
       })
       request.then(function (res, err) {
         console.log(res)

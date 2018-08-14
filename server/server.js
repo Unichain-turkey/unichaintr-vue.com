@@ -1,4 +1,3 @@
-var cors = require('cors')
 var fs = require('fs');
 var bodyParser = require('body-parser')
 const express = require('express');
@@ -12,9 +11,15 @@ app.set('port', port)
 app.use( bodyParser.json());
 
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 var ipList = {};
 
-app.get('/mediumDaily',cors(), function(request, response) {
+app.get('/mediumDaily', function(request, response) {
   var request = require('request');
   var https = require('https');
   var parseString = require('xml2js').parseString;
@@ -60,7 +65,7 @@ app.get('/mediumDaily',cors(), function(request, response) {
 });
 
 
-app.post('/contact',cors(),function(request,response){
+app.post('/contact',function(request,response){
   console.log(request.body)
   if (ipCheck(request)){
     let req=request.body
