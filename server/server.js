@@ -3,7 +3,6 @@ var fs = require('fs');
 var bodyParser = require('body-parser')
 const express = require('express');
 
-
 const app = express()
 const host = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 3000
@@ -12,8 +11,8 @@ app.use( bodyParser.json());
 
 var ipList = {};
 
-app.get('/mediumDaily',cors(),function(request, response) {
-  var request = require('request');
+app.get('/mediumDaily',cors(),function(req, res) {
+  var req = require('req');
   var https = require('https');
   var parseString = require('xml2js').parseString;
   var xml = '';
@@ -53,17 +52,20 @@ app.get('/mediumDaily',cors(),function(request, response) {
       };
       resultArray.push(data);
     }
-    response.send(resultArray);
+    res.send(resultArray);
   });
 });
 
-
-app.post('/contact',cors(),function(request,response){
-  console.log(request.body)
-  if (ipCheck(request)){
-    let req=request.body
-    saveLog(request)
-    response.end("Done");
+app.post('/contact',cors(),function(req,res){
+  console.log(req.body)
+  if (ipCheck(req)){
+    let req=req.body
+    saveLog(req)
+    res.end("Done");
+  }
+  else{
+    res.statusCode = 401;
+    res("Failed");
   }
 });
 app.get('/', function (req, res) {
