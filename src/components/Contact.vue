@@ -85,8 +85,6 @@ export default {
         }
       })
       request.then(function (res, err) {
-        console.log(res)
-        console.log(err)
         if (err == null) {
           alert("Your message is received ,thank you");
 
