@@ -1,8 +1,14 @@
 <template>
   <div class="block no-padding pd-rs">
-    <div class="posts-sec st3 bd-df">
-      <div class="row">
-        <div class="col-lg-3 col-md-4 col-sm-6 align-middle "  v-for="post in posts">
+
+
+    <carousel :perPage="perPage"
+              paginationColor="#022d46"
+              :paginationSize="paginationSize"
+              :paginationPadding="paginationPadding"
+              :loop="loop" :navigationEnabled="navigationEnabled" >
+
+    <slide v-for="post in posts " v-bind:key="post.title[0]">
           <a  :href="post.link[0]" target="_blank">
           <div class="post">
             <div class="post-img">
@@ -17,22 +23,32 @@
 
           </div><!--post end-->
           </a>
-        </div>
+          </slide>
+        </carousel>
 
 
-      </div>
-    </div>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import { Carousel, Slide } from 'vue-carousel';
 export default {
   name: "Feeds",
   data: function () {
     return {
       posts: null,
+      paginationSize:10,
+      paginationPadding:10,
+      loop:true,
+      navigationEnabled:true,
+      perPage:3
+
     }
+  },
+  components: {
+    Carousel,
+    Slide
   },
   mounted(){
     let that=this
