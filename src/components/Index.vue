@@ -76,7 +76,7 @@
 
     </section>
 
-    <section>
+    <section id="blog">
       <feeds></feeds>
     </section>
 

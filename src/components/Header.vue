@@ -13,6 +13,7 @@
             <li><a class="active" href="#" title="">Ana Sayfa</a></li>
             <li><a href="#whoIam" title="">Hakkımızda</a></li>
             <li><a href="#projects" title="">Projeler</a></li>
+            <li><a href="#blog" title="">Blog</a></li>
             <li><a href="#knock-knock" title="">İletişim</a></li>
           </ul>
         </nav><!--nav end-->
