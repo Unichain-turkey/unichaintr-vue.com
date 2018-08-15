@@ -54,6 +54,8 @@ app.get('/mediumDaily',function(req, res) {
     for(var item in g['item']){
       var data = {
         title: g['item'][item]['title'],
+        pubDate: g['item'][item]['pubDate'],
+        creator:g['item'][item]['dc:creator'],
         link: g['item'][item]['link'],
         description : g['item'][item]['content:encoded']
       };
