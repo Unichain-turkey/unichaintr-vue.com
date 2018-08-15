@@ -76,6 +76,10 @@
 
     </section>
 
+    <section>
+      <feeds></feeds>
+    </section>
+
     <section id="knock-knock">
       <contact></contact>
     </section>
@@ -90,11 +94,13 @@ import Footer from '@/components/Footer'
 import Projects from '@/components/Projects'
 import Sponsors from '@/components/sponsor/Sponsors'
 import BeingSponsor from '@/components/sponsor/BeingSponsor.vue'
+import Feeds from "./Feeds";
 
 
 export default {
   name: "Index",
   components: {
+    feeds:Feeds,
     about: About,
     stats: Stats,
     contact: Contact,

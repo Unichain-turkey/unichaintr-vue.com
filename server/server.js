@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
 var ipList = {};
 
 app.get('/mediumDaily',function(req, res) {
-  var req = require('req');
+  var req = require('request');
   var https = require('https');
   var parseString = require('xml2js').parseString;
   var xml = '';

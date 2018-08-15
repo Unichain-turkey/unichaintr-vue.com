@@ -64,8 +64,24 @@
 </template>
 
 <script>
+import axios from 'axios';
 export default {
-        name: "Feeds"
+  name: "Feeds",
+  mounted(){
+    console.log("Here")
+
+    const request = axios({
+      method: 'get',
+      url: 'http://46.101.182.159:3000/mediumDaily',
+    })
+    request.then(function (res, err) {
+      console.log(res)
+      if (err == null) {
+        alert("Your message is received ,thank you");
+
+      }
+    })
+  },
 }
 </script>
 
