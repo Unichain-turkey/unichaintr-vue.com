@@ -1,5 +1,5 @@
 <template>
-  <div class="block no-padding pd-rs">
+  <div class="block m-2 p-2 ">
 
 
     <carousel :perPage="perPage"
@@ -9,6 +9,7 @@
               :loop="loop" :navigationEnabled="navigationEnabled" >
 
     <slide v-for="post in posts " v-bind:key="post.title[0]">
+      <div >
           <a  :href="post.link[0]" target="_blank">
           <div class="post">
             <div class="post-img">
@@ -23,9 +24,9 @@
 
           </div><!--post end-->
           </a>
+      </div>
           </slide>
         </carousel>
-
 
   </div>
 </template>
