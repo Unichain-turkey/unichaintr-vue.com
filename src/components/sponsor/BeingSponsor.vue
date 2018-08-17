@@ -67,80 +67,76 @@
 </template>
 
 <script>
-import store from "@/store";
-
-export default {
-  name: "BeingSponsor",
-  data () {
-    return {
-      sponsorName: '',
-      sponsorUrl: '',
-      imageHash: '',
-      duration: null,
-      contract: this.$store.getters.contractInstance(),
-      pending: false,
-      image: null
-    }
-  },
-  methods: {
-    createSponsorship () {
-      let _base = store.getters.currentAddress
-      const temp = this.contract.methods.beSponsor(
-        this.sponsorName,
-        this.sponsorUrl,
-        this.imageHash,
-        this.duration
-      ).send(
-        {value: this.$options.filters.toWei('1') * this.duration, from: _base})
-      this.pending = true
-      temp.then(function (error, value) {
-
-        if(!error){
-          alert(error)
-        }else{
-          alert("Your request of being sponsorships is received !")
-          window.location.href = "/"
-        }
-        this.pending = false
-      }.bind(this))
-    },
-    onFileChanged (event) {
-      this.image = event.target.files[0]
-    },
-    onUpload () {
-      let ipfs = this.$store.getters.getIpfs
-      let reader = new window.FileReader()
-      reader.onload = function (e) {
-        let buffer = Buffer.from(reader.result)
-        ipfs.add(buffer, {progress: (prog) => console.log(`received: ${prog}`)})
-          .then((response) => {
-            this.ipfsPin()
-            this.imageHash = response[0].hash
-          }).catch((err) => {
-          console.error(err)
-        })
-      }.bind(this)
-      reader.readAsArrayBuffer(this.image)
-    },
-    uploadImage () {
-      if (this.imageHash != null) {
-        console.log('Hash of image', this.imageHash)
-      } else {
-        alert('Please fill the all fields')
+  import store from "@/store";
+  export default {
+    name: "BeingSponsor",
+    data () {
+      return {
+        sponsorName: '',
+        sponsorUrl: '',
+        imageHash: '',
+        duration: null,
+        contract: this.$store.getters.contractInstance(),
+        pending: false,
+        image: null
       }
     },
-    ipfsPin(){
-      console.log(this.image)
-      let ipfs = this.$store.getters.getIpfs
-      ipfs.pin.add(this.imageHash, function (err)  {
-        err==null ? console.log("Succesfully pinned the image on ipfs"):console.log("Failed pinnig image to repo")
-
-      })
+    methods: {
+      createSponsorship () {
+        let _base = store.getters.currentAddress
+        const temp = this.contract.methods.beSponsor(
+          this.sponsorName,
+          this.sponsorUrl,
+          this.imageHash,
+          this.duration
+        ).send(
+          {value: this.$options.filters.toWei('1') * this.duration, from: _base})
+        this.pending = true
+        temp.then(function (error, value) {
+          if(!error){
+            alert(error)
+          }else{
+            alert("Your request of being sponsorships is received !")
+            window.location.href = "/"
+          }
+          this.pending = false
+        }.bind(this))
+      },
+      onFileChanged (event) {
+        this.image = event.target.files[0]
+      },
+      onUpload () {
+        let ipfs = this.$store.getters.getIpfs
+        let reader = new window.FileReader()
+        reader.onload = function (e) {
+          let buffer = Buffer.from(reader.result)
+          ipfs.add(buffer, {progress: (prog) => console.log(`received: ${prog}`)})
+            .then((response) => {
+              this.ipfsPin()
+              this.imageHash = response[0].hash
+            }).catch((err) => {
+            console.error(err)
+          })
+        }.bind(this)
+        reader.readAsArrayBuffer(this.image)
+      },
+      uploadImage () {
+        if (this.imageHash != null) {
+          console.log('Hash of image', this.imageHash)
+        } else {
+          alert('Please fill the all fields')
+        }
+      },
+      ipfsPin(){
+        console.log(this.image)
+        let ipfs = this.$store.getters.getIpfs
+        ipfs.pin.add(this.imageHash, function (err)  {
+          err==null ? console.log("Succesfully pinned the image on ipfs"):console.log("Failed pinnig image to repo")
+        })
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-
 </style>
