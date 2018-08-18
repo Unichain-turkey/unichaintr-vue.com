@@ -13,7 +13,7 @@
           <a  :href="post.link[0]" target="_blank">
           <div class="post">
             <div class="post-img">
-              <img  src="https://cdn-images-1.medium.com/max/720/1*RkrXVq-its7PCq3xYoHvEg.jpeg" alt="">
+              <img  src="/static/images/medium/irfan.jpg" alt="">
             </div>
             <div class="post-details">
               <ul class="post-info">
