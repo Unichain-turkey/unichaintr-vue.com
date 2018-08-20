@@ -13,7 +13,7 @@
           <a  :href="post.link[0]" target="_blank">
           <div class="post">
             <div class="post-img">
-              <img  src="/static/images/medium/irfan.jpg" alt="">
+              <img src="/static/images/medium/topluluk.png" alt="">
             </div>
             <div class="post-details">
               <ul class="post-info">
@@ -55,7 +55,7 @@ export default {
     let that=this
     const request = axios({
       method: 'get',
-      url: 'http://46.101.182.159:3000/mediumDaily',
+      url: 'https://46.101.182.159:3000/mediumDaily',
     })
     request.then(function (res, err) {
       console.log(res.data)
@@ -79,31 +79,7 @@ export default {
 
     },
     getStaticImage:function(ind){
-      switch(ind) {
-        case 0:
-          break;
-          return "/static/images/medium/whoarewe.jpg"
-        case 1:
-          return "/static/images/medium/whoarewe.jpg"
-          break;
-        case 2:
-          return "/static/images/medium/whoarewe.jpg"
-          break;
-        case 3:
-          return "/static/images/medium/whoarewe.jpg"
-          break;
-        case 4:
-          return "/static/images/medium/whoarewe.jpg"
-          break;
-        case 5:
-          return "/static/images/medium/whoarewe.jpg"
-          break;
-        case 6:
-          return "/static/images/medium/whoarewe.jpg"
-          break;
-        default:
-          return "/static/images/medium/whoarewe.jpg"
-      }
+      return "/static/images/medium/"+str(ind+1)+".jpg"
     }
   }
 }
