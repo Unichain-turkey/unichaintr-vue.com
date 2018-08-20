@@ -5,25 +5,15 @@
         <div class="container">
           <div class="footer-logoo">
             <img src="../../static/images/footer-logo.png" alt="">
-          </div><!--footer-logoo end-->
-          <!--<ul class="footer-links">-->
-          <!--<li><a href="#" title="">Ana Sayfa</a></li>-->
-          <!--<li><a href="#" title="">Projeler</a></li>-->
-          <!--<li><a href="#" title="">Blog</a></li>-->
-          <!--<li><a href="#" title="">Hakkımızda</a></li>-->
-          <!--<li><a href="#" title="">İletişim</a></li>-->
-          <!--</ul>&lt;!&ndash;footer-links end&ndash;&gt;-->
+          </div>
           <ul class="addrs-info">
             <li><span></span></li>
             <li><span>info@unichaintr.com</span></li>
           </ul>
           <ul class="footer-social-links">
-            <li><a href="#" title=""><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-rss"></i></a></li>
-            <li><a href="#" title=""><i class="fa fa-dribbble"></i></a></li>
+            <li><a href="https://twitter.com/UniChaintr" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a href="https://www.linkedin.com/company/unichaintr/?trk=ppro_cprof" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+
           </ul>
         </div>
       </div><!--footer-data3 end-->

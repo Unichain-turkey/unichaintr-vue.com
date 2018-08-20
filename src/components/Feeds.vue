@@ -8,7 +8,7 @@
               :paginationPadding="paginationPadding"
               :loop="loop" :navigationEnabled="navigationEnabled" >
 
-    <slide v-for="post in posts " v-bind:key="post.title[0]">
+    <slide v-for="(post, index) in posts " v-bind:key="post.title[0]">
       <div >
           <a  :href="post.link[0]" target="_blank">
           <div class="post">
@@ -77,6 +77,33 @@ export default {
       console.log(src)
       return src
 
+    },
+    getStaticImage:function(ind){
+      switch(ind) {
+        case 0:
+          break;
+          return "/static/images/medium/whoarewe.jpg"
+        case 1:
+          return "/static/images/medium/whoarewe.jpg"
+          break;
+        case 2:
+          return "/static/images/medium/whoarewe.jpg"
+          break;
+        case 3:
+          return "/static/images/medium/whoarewe.jpg"
+          break;
+        case 4:
+          return "/static/images/medium/whoarewe.jpg"
+          break;
+        case 5:
+          return "/static/images/medium/whoarewe.jpg"
+          break;
+        case 6:
+          return "/static/images/medium/whoarewe.jpg"
+          break;
+        default:
+          return "/static/images/medium/whoarewe.jpg"
+      }
     }
   }
 }
