@@ -1,6 +1,6 @@
 <template>
-  <section  class="block">
-    <div>
+  <section>
+    <div class="block">
         <div class="container pt-4   text-center ">
           <div class="row m-2 pb-2">
             <div class="col"><h3 class="text-white">Demo of Adherium on Sponsorships</h3></div>
@@ -24,6 +24,7 @@
       <router-link :to="{ path: 'admin' }">Admin</router-link>
     </div>
   </section>
+
 </template>
 
 <script>

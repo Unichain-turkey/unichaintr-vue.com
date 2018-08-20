@@ -3,11 +3,11 @@
 @media (max-width: 1800px) {
 	.container2 {padding: 0 250px 0 45px;}
 	.locations-list ul li {margin-bottom: 45px;}
-} 
+}
 @media (max-width: 	1880) {
 	.more-properties ul li {padding: 0 20px;}
 	.more-properties ul li h3 {font-size: 14px;line-height: 22px;}
-	.locations-images {padding-right: 0;}	
+	.locations-images {padding-right: 0;}
 	.locations-list ul li {font-size: 30px;margin-bottom: 36px;}
 }
 @media (max-width: 1700px) {
@@ -70,7 +70,7 @@
 	.pager-details.full.pd-lft-200 {padding-left: 0;}
 	.construction-company p br {display: none;}
 	br {display: none;}
-	.house-imgs-slides {padding-left: 70px;padding-right: 70px;} 
+	.house-imgs-slides {padding-left: 70px;padding-right: 70px;}
 	.listing-info > h3 {margin-bottom: 20px;font-size: 17px;}
 	.listing-info {padding: 25px 49px 60px 50px;}
 	.service-details p {font-size: 12px;line-height: 22px;}
@@ -148,7 +148,7 @@
 	.spec-hd {padding-left: 0;}
 	.properties {padding-right: 0;}
 	.our-specifications {padding: 0 50px;}
-}	
+}
 @media (max-width: 991px) {
 	main:before {display: none;}
 	.ep-icon:after {display: none;}
@@ -501,7 +501,7 @@
 	.address span {font-size: 13px;}
 	.contact-form-sec {padding: 70px 20px;}
 	.contact-form-sec h3 {line-height: 28px;}
-	.contact-form-sec input, .contact-form-sec textarea {margin-bottom: 20px;} 
+	.contact-form-sec input, .contact-form-sec textarea {margin-bottom: 20px;}
 	.banner-section h2 {top:60%;}
 	.post-title {font-size: 24px;line-height: 30px;}
 	.house-info ul li strong {font-size: 12px;}
@@ -631,7 +631,7 @@
 	.post-sm-sec {padding: 20px 0;}
 	.kons-construct {padding: 0 15px;}
 	.house-slider.style2 .slick-prev::before, .house-slider.style2 .slick-next::before {font-size: 24px;}
-	.house-slider .slick-next {right: 15px;} 
+	.house-slider .slick-next {right: 15px;}
 	.house-slider .slick-prev {left: 15px;}
 	.lyr4 {font-size: 14px !important;}
 	#slide-1648-layer-1 {margin-top: 0 !important}
