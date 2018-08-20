@@ -1,7 +1,6 @@
 <template>
 
   <div class="container pt-3 text-center  " >
-  <h3 class="sm-title">SPONSORLARIMIZ</h3>
   <div class="container  ">
     <carousel :perPage="perPage"
               paginationColor="#022d46"
@@ -12,11 +11,11 @@
 
       <slide v-for="sponsor in sponsors" v-bind:key="sponsors['url']">
 
-        <div class="card border-dark mb-3" style="width: 18rem;  background-color: #03192b;">
+        <div class="card border-dark" style="width: 18rem;  background-color: #03192b;">
           <a :href="sponsor['url']"  target="_blank" class="link">
-          <img class="card-img-top p-3 " :src="getImageUrl(sponsor['imageHash'])"  alt="Card image cap">
-          <div class="card-body p-2">
-            <h5  class="" style="color: white">{{sponsor['name']}}</h5>
+          <img class="card-img-top" :src="getImageUrl(sponsor['imageHash'])"  alt="Card image cap">
+          <div class="card-body">
+            {{sponsor['name']}}
           </div>
 
           </a>
@@ -72,7 +71,10 @@ export default {
       var self = this
       let _contract = this.$store.getters.contractInstance()
       _contract.getPastEvents('beenSponsor', { fromBlock: 0, toBlock: 'latest' }, function(error, events) {
+
+
         events.forEach((element) => {
+
           var address=element.returnValues[0]
           var _sponsor = this.getSposnsor(address)
           _sponsor.methods.getSponsor().call().then(function (val) {
@@ -86,6 +88,13 @@ export default {
 
         });
       }.bind(this))
+      var result=_contract.methods.getInfo().call();
+      result.then(function(value) {
+        console.log(value)
+        this.$store.dispatch('setInfo', value)
+      }.bind(this));
+
+
     }
   }
 }

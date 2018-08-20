@@ -4,7 +4,7 @@
       <div class="footer-data3">
         <div class="container">
           <div class="footer-logoo">
-            <img src="../../static/images/footer-logo.png" alt="">
+            <img src="/static/images/logo.png" alt="">
           </div>
           <ul class="addrs-info">
             <li><span></span></li>

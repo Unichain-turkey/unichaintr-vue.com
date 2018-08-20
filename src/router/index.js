@@ -6,7 +6,8 @@ import Index from '@/components/Index'
 import ProjectDetail from '@/components/ProjectDetail'
 import Projects from '@/components/Projects'
 import Admin from '@/components/sponsor/Admin'
-import store from '@/store/'
+import Demo from '@/components/sponsor/Demo'
+
 
 
 Vue.use(Router)
@@ -18,6 +19,11 @@ let router = new Router({
       path: '/',
       name: 'Index',
       component: Index
+    },
+    {
+      path: '/demo',
+      name: 'demo',
+      component: Demo
     },
     {
       path: '/admin',

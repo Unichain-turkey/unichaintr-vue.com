@@ -4,11 +4,11 @@ import Vuex from 'vuex'
 import { ipfs ,web3Instance, contractInstance } from '@/common/coreinterface.js'
 
 var NETWORKS= {
-     1: 'Main Net',
-     2: 'Deprecated Morden test network',
-     3: 'Ropsten test network',
-     4: 'Rinkeby test network',
-    42: 'Kovan test network',
+  1: 'Main Net',
+  2: 'Deprecated Morden test network',
+  3: 'Ropsten test network',
+  4: 'Rinkeby test network',
+  42: 'Kovan test network',
   4447: 'Truffle Develop Network',
   5777: 'Ganache Blockchain'
 };
@@ -25,8 +25,9 @@ export default new Vuex.Store({
     ipfsApi: null,
     networkName:"",
     sponsorCount: 0,
-    activeSponsorCount: 0,
-    totalValue: 0
+    pendingCount: 0,
+    limit: 0,
+    balanceSponsor: 0
   },
   strict: true,
   mutations: {
@@ -41,21 +42,19 @@ export default new Vuex.Store({
     SETCONTRACTINSTANCE (state, result) {
       state.contractInstance = () => result
     },
-    SETSPONSORCOUNT (state, result) {
-      state.sponsorCount = result
+    SETINFORMATION (state, result) {
+      console.log("in storage :",result)
+      state.sponsorCount = result['0']
+      state.pendingCount = result['1']
+      state.limit = result['2']
+      state.balanceSponsor = result['3']
     },
     SETIPFS (state, result) {
       state.ipfsApi = result
     },
-    SETACTIVESPONSORCOUNT (state, result) {
-      state.activeSponsorCount = result
-    },
-    SETTOTALVALUE (state, result) {
-      state.totalValue = result
-    }
   },
   actions: {
-      async  createWeb3 ({ commit }) {
+    async  createWeb3 ({ commit }) {
       let result = await web3Instance;
       commit('CREATEWEB3', result)
 
@@ -64,19 +63,12 @@ export default new Vuex.Store({
       let result = await contractInstance;
       commit('SETCONTRACTINSTANCE', result)
     },
-     ipfsSet ({ commit }) {
+    ipfsSet ({ commit }) {
       commit('SETIPFS',ipfs)
     },
-    setSponsorCount ({ commit }, result) {
-      commit('SETSPONSORCOUNT', result)
+    setInfo ({ commit }, result) {
+      commit('SETINFORMATION', result)
     },
-
-    setActiveSponsorCount ({ commit }, result) {
-      commit('SETACTIVESPONSORCOUNT', result)
-    },
-    setTotalValue ({ commit }, result) {
-      commit('SETTOTALVALUE', result)
-    }
   },
   getters: {
     web3: state => {
@@ -101,11 +93,14 @@ export default new Vuex.Store({
     sponsorCount: state => {
       return state.sponsorCount
     },
-    activeSponsorCount: state => {
-      return state.activeSponsorCount
+    pendingCount: state => {
+      return state.pendingCount
     },
-    totalValue: state => {
-      return state.totalValue
+    limit: state => {
+      return state.limit
+    },
+    balanceSponsor: state => {
+      return (state.balanceSponsor / 1000000000000000000).toFixed(4)
     },
     getIpfs: state => {
       return state.ipfsApi

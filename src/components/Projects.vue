@@ -1,13 +1,13 @@
 <template>
   <div class="block3">
     <div class="fixed-bg bg1"></div>
-    <div class="container2">
+    <div class="container">
       <div class="building-gallery-tab">
         <div class="gallery-tabs-head">
           <h4>"Projeler geliştiren, geliştirirken öğrenen ve öğrendiğini öğreten bir toplululuğuz."</h4>
         </div><!--gallery-tabs-head end-->
         <div class="gallery-tab-contents">
-          <div class="row text-center">
+          <div class="row ">
             <div class="col-lg-4 col-md-8">
               <div class="locations-images">
                 <div class="location-img current" id="tab-1">
@@ -20,10 +20,11 @@
               </div><!--locations-images end-->
             </div>
 
-            <div class="col-lg-4 col-md-8">
+            <div class="col-lg-4 col-md-8 ">
               <div class="locations-info">
                 <div class="location-info current " id="tab-1" >
-                    <p class="pt-2 ">{{info}}</p>
+                  <p class="pt-2 ">{{info}}</p>
+                  <router-link :to="{ path: 'demo' }">Demo</router-link>
                 </div>
 
               </div><!--locations-images end-->

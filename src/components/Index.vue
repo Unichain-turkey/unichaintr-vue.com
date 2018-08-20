@@ -63,18 +63,7 @@
     </section>
 
 
-    <section  class=" p-1">
-      <div class="container p-1 ">
-        <div class="row ">
 
-        <sponsors ></sponsors>
-        </div>
-        <div class="row p-4">
-        <beingsponsor></beingsponsor>
-        </div>
-      </div>
-
-    </section>
 
     <section id="blog">
       <feeds></feeds>
@@ -123,18 +112,17 @@ export default {
       setTimeout(function () { this.init() }.bind(this) , 2100)
     }
   },
-  methods:{
-    init:function () {
-      const result =this.$store.getters.contractInstance().methods.isAdmin().call({from: this.$store.getters.currentAddress})
+  methods: {
+    init: function () {
+      const result = this.$store.getters.contractInstance().methods.isAdmin().call({from: this.$store.getters.currentAddress})
       result.then(function (value, error) {
-        if (typeof(error )== 'undefined') {
-          console.log("Admin mode -> ",value)
+        if (typeof(error) == 'undefined') {
+          console.log("Admin mode -> ", value)
           localStorage.setItem("isAdmin", value);
         }
       });
 
     }
-
   }
 }
 </script>
