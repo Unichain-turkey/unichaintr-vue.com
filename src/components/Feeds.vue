@@ -55,7 +55,7 @@ export default {
     let that=this
     const request = axios({
       method: 'get',
-      url: 'https://46.101.182.159:3000/mediumDaily',
+      url: 'http://46.101.182.159:3000/mediumDaily',
     })
     request.then(function (res, err) {
       console.log(res.data)

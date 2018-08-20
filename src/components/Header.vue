@@ -22,10 +22,10 @@
 
     <div class="responsive-mobile-menu">
       <a href="#" title="" class="close-menu"><i class="ion-close"></i></a>
-      <ul>
+      <ul @click="navigate">
         <li><a class="active" href="#" title="">Ana Sayfa</a></li>
         <li><a href="#whoIam" title="">Hakkımızda</a></li>
-        <li><a href="#projects" title="">Projeler</a></li>i
+        <li><a href="#projects" title="">Projeler</a></li>
         <li><a href="#blog" title="">Blog</a></li>
         <li><a href="#knock-knock" title="">İletişim</a></li>
       </ul>
@@ -34,9 +34,17 @@
 </template>
 
 <script>
-    export default {
-        name: "Header"
+export default {
+  name: "Header",
+  methods:{
+    navigate:function () {
+      $(".responsive-mobile-menu").removeClass("active");
     }
+
+  },
+
+
+}
 </script>
 
 <style scoped>
