@@ -61,6 +61,7 @@ app.get('/mediumDaily',function(req, res) {
       };
       resultArray.push(data);
     }
+    resultArray.sort(sortFunction).reverse();
     res.send(resultArray);
   });
 });
@@ -82,6 +83,11 @@ app.get('/', function (req, res) {
   res.json({ "ipAddress": remoteAddress });
 });
 
+function sortFunction(a,b){
+  var dateA = new Date(a.pubDate).getTime();
+  var dateB = new Date(b.pubDate).getTime();
+  return dateA > dateB ? 1 : -1;
+}
 function ipCheck(req) {
   let ip=req.connection.remoteAddress
   if (ip in ipList){
