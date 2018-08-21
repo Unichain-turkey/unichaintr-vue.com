@@ -1,19 +1,17 @@
 <template>
-  <div class="block m-2 p-2 ">
+  <div class="block ">
 
 
     <carousel :perPage="perPage"
               paginationColor="#022d46"
-              :paginationSize="paginationSize"
-              :paginationPadding="paginationPadding"
-              :loop="loop" :navigationEnabled="navigationEnabled" >
+              :loop="loop" >
 
     <slide v-for="(post, index) in posts " v-bind:key="post.title[0]">
       <div >
           <a  :href="post.link[0]" target="_blank">
           <div class="post">
             <div class="post-img">
-              <img src="/static/images/medium/topluluk.png" alt="">
+              <img src="/static/images/mediumpost.svg" alt="">
             </div>
             <div class="post-details">
               <ul class="post-info">
@@ -40,9 +38,8 @@ export default {
     return {
       posts: null,
       paginationSize:10,
-      paginationPadding:10,
       loop:true,
-      navigationEnabled:true,
+      navigationEnabled:false,
       perPage:3
 
     }

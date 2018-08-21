@@ -197,9 +197,9 @@ p {
 .slick-next {
 	background-color: #032540;
 }
-.bg1 {
-	background-image: url(../images/resources/bg1.jpg);
-}
+/* .bg1 { */
+	/* background-image: url(../images/resources/bg1.jpg); */
+/* } */
 .locations-list ul li {
  	color: #ffffff;
 }

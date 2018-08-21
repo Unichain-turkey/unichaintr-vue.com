@@ -62,9 +62,6 @@
       <projects></projects>
     </section>
 
-
-
-
     <section id="blog">
       <feeds></feeds>
     </section>

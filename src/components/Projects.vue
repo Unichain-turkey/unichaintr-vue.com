@@ -11,11 +11,11 @@
             <div class="col-lg-4 col-md-8">
               <div class="locations-images">
                 <div class="location-img current" id="tab-1">
-                  <a href="https://github.com/Unichain-turkey/ether-registration" target="_blank"><img src="static/images/registhereum-logo2.jpg" alt=""></a>
+                  <a href="https://github.com/Unichain-turkey/ether-registration" target="_blank"><img src="static/images/registhereum.svg" alt=""></a>
 
                 </div><!--location-img end-->
                 <div class="location-img " id="tab-2">
-                  <a href="https://github.com/Unichain-turkey/adhereum" target="_blank"><img src="static/images/adhereum-logo.png" alt=""></a>
+                  <a href="https://github.com/Unichain-turkey/adhereum" target="_blank"><img src="static/images/adhereum.svg" alt=""></a>
                 </div><!--location-img end-->
               </div><!--locations-images end-->
             </div>

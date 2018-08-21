@@ -7,7 +7,7 @@
           </div>
             <div class="row  ">
               <div class="col"><h5 class="text-white">Total sponsor : {{ $store.getters.sponsorCount }}</h5></div>
-              <div class="col"><h5 class="text-white">Total pending : {{ $store.getters.pendingCount }} </h5></div>
+              <div class="col"><h5 class="text-white">Total pending : {{ $store.getters.pendingCount - $store.getters.sponsorCount  }} </h5></div>
               <div class="col"><h5 class="text-white">Limit :{{ $store.getters.limit }} </h5></div>
               <div class="col"><h5 class="text-white">Total amount : {{ $store.getters.balanceSponsor }} ether</h5></div>
             </div>

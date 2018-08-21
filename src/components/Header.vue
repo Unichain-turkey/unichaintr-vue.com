@@ -38,7 +38,7 @@ export default {
   name: "Header",
   methods:{
     navigate:function () {
-      $(".responsive-mobile-menu").removeClass("active");
+      //$(".responsive-mobile-menu").removeClass("active");
     }
 
   },
