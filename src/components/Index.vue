@@ -82,6 +82,7 @@ import Sponsors from '@/components/sponsor/Sponsors'
 import BeingSponsor from '@/components/sponsor/BeingSponsor.vue'
 import Feeds from "./Feeds";
 
+$('.mc-closeModal').hide()
 
 export default {
   name: "Index",
