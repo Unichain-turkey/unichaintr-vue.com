@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import {app} from '../main'
 
 import { ipfs ,web3Instance, contractInstance } from '@/common/coreinterface.js'
 
@@ -27,7 +28,7 @@ export default new Vuex.Store({
     sponsorCount: 0,
     pendingCount: 0,
     limit: 0,
-    balanceSponsor: 0
+    balanceSponsor: 0,
   },
   strict: true,
   mutations: {
