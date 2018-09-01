@@ -49,7 +49,7 @@ export default {
   name: "Projects",
   data () {
     return {
-      info:"Etkinliklere, kayıt/katılım oranını arttırmak için akıllı kontratlarla oluşturulmuş bir ödül-ceza sistemidir." ,
+      info:this.$t("registereum")
 
     }
   },
@@ -57,10 +57,10 @@ export default {
     tabClick:function (index) {
       console.log(index)
       if (index==1){
-        this.info="Etkinliklere, kayıt/katılım oranını arttırmak için akıllı kontratlarla oluşturulmuş bir ödül-ceza sistemidir."
+        this.info=this.$t("registereum")
       }
       else{
-        this.info="Adhereum sitenizdeki bannerları aracılar olmadan reklamcılara kiralamanız için size bir market sunar, ayrıca içeriğinizle uyumlu sponsor bulmanızı kolaylaştırır."
+        this.info=this.$t("adhereum")
       }
 
 

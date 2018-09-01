@@ -6,10 +6,9 @@
         <div class="row">
           <div class="col-lg-6 Absolute-Center" >
             <div class="contact-more-info">
-              <h5>Bize ulaşabileceğiniz adresler;</h5>
+              <h5>{{$t("contactInfo")}}</h5>
               <h2>
-                <a href=" mailto:unichainturkey@gmail.com" <i class="fa fa-envelope"></i>  unichainturkey@gmail.com
-                </a>
+                <a href=" mailto:unichainturkey@gmail.com"><i class="fa fa-envelope"></i>  unichainturkey@gmail.com</a>
               </h2>
             </div>
             <!--contact-more-info end-->

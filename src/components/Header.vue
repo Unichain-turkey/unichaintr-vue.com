@@ -31,7 +31,7 @@
         <li><a href="#projects" title="">{{ $t("projects") }}</a></li>
         <li><a href="#blog" title="">{{ $t("blog") }}</a></li>
         <li><a href="#knock-knock" title="">{{ $t("contact") }}</a></li>
-        <li><i class="fa fa-language fa-lg" @click="switchLang" aria-hidden="true" style="color:white"></i></li>
+        <li><i class="fa fa-language fa-lg" @click="switchLang" aria-hidden="true" style="color:white">TR</i></li>
 
       </ul>
     </div><!--responsive-mobile-menu end-->

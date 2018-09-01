@@ -8,7 +8,7 @@
           </div>
           <ul class="addrs-info">
             <li><span></span></li>
-            <li><span>info@unichaintr.com</span></li>
+            <li><span>unichainturkey@gmail.com</span></li>
           </ul>
           <ul class="footer-social-links">
             <li><a href="https://twitter.com/UniChaintr" target="_blank"><i class="fa fa-twitter"></i></a></li>

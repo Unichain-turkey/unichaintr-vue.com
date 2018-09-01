@@ -13,27 +13,27 @@
                 <img src="static/images/bg-1.png" alt="" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="" class="rev-slidebg" data-no-retina>
                 <!-- LAYERS -->
                 <!-- LAYER NR. 1 -->
-                <div class="tp-caption lyr2 tp-resizeme" id="slide-1648-layer-5" data-x="left" data-hoffset="0" data-y="center" data-voffset="-135" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                <div class="tp-caption lyr2 tp-resizeme"  id="slide-1648-layer-5" data-x="left" data-hoffset="0" data-y="center" data-voffset="-135" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":700,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
                      data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]" data-start="200" data-splitin="chars" data-splitout="none" data-elementdelay="0.04" style="">UniChain
                 </div>
                 <!-- LAYER NR. 2 -->
                 <div class="tp-caption lyr1 tp-resizeme" id="slide-1648-layer-6" data-x="left" data-hoffset="0" data-y="center" data-voffset="0" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                     data-paddingtop="[50,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[0,0,0,0]" data-start="2000" data-splitin="chars" data-splitout="none" data-elementdelay="0.06" style="font-size: 30px;
+                     data-paddingtop="[100,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[100,100,100,100]" data-paddingleft="[0,0,0,0]" data-start="2000" data-splitin="chars" data-splitout="none" data-elementdelay="0.06" style="font-size: 30px;
 										           line-height:1.6;
 												 ">
-                  Ünİversİteler Arası Blockchaİn Topluluğu
+                  {{ $t("unichain") }}
                 </div>
 
 
-                <div class="tp-caption lyr1 " id="slide-1648-layer-6" data-x="left" data-hoffset="0" data-y="center" data-voffset="0" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
-                     data-paddingtop="[700,100,100,100]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[500,0,0,0]" data-start="2000" data-splitin="chars" data-splitout="none" data-elementdelay="0.06" style="font-size: 30px;
+                <div class="tp-caption lyr1 " id="slide-1648-layer-6" data-x="center" data-hoffset="0" data-y="center" data-voffset="0" data-width="['auto']" data-height="['auto']" data-type="text" data-responsive_offset="on" data-frames='[{"from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeOut"},{"delay":"wait","speed":1000,"to":"opacity:0;","ease":"nothing"}]'
+                     data-paddingtop="[200,100,100,100]" data-paddingright="[0,0,0,0]" data-paddingbottom="[10,10,10,10]" data-paddingleft="[500,0,0,0]" data-start="2000" data-splitin="chars" data-splitout="none" data-elementdelay="0.06" style="font-size: 30px;
 										           line-height:1.6;
 												 ">
-                  <div class="container">
+                  <div class="container ">
                     <div class="row">
-                      <div class="col-sm">
+                      <div class="col-sm align-content-center">
 
-                        <a href="https://medium.com/unichain-tr" target="_blank"><button type="button" class="btn btn-info btn-lg" style="margin:auto; display:block;">Medium Tanıtım Yazısı</button></a>
+                        <a href="https://medium.com/unichain-tr" target="_blank"><button type="button" class="btn  btn-info btn-md" style="margin:auto; display:block;">{{ $t("mediumTanitim") }}</button></a>
                       </div>
                     </div>
                   </div>

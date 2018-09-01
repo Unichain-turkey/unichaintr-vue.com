@@ -5,31 +5,22 @@
         <div class="row">
           <div class="col">
             <div class="who-we-are">
-              <h3 class="sm-title">Biz Kimiz?</h3>
+              <h3 class="sm-title">{{$t("whoarewe")}}</h3>
               <p>
-                Günümüzün en güncel teknolojilerinden olan blockchain teknolojisini ülke
-                olarak geriden takip etmek yerine, dümeni eline taraf olmayı hedefleyen;
-                genç, dinamik, istekli ve nitelikli üniversite öğrencilerinden oluşan,
-                tamamen gönüllü bir blockchain topluluğuyuz.
+                {{$t("whoarewecontent1")}}
               </p>
               <p>
-                Amacımız teknolojiyi güncel olarak takip eden, öğrenen, öğreten ve
-                geliştiren öğrenciler yetiştirip ülkemizi bu alanda öne çıkarmaktır.
+                {{$t("whoarewecontent2")}}
               </p>
-              <h3 class="sm-title">Neler Yapıyoruz?</h3>
+              <h3 class="sm-title">{{$t("whatDo")}}</h3>
               <div class="our-features">
                 <div class="feature-icon">
                   <i class="fa fa-edit" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
-                  <h3>Planlıyoruz</h3>
+                  <h3>{{$t("plan")}}</h3>
                   <p>
-                    Hiçbir maddi çıkar beklemeden, Türkiye’nin dört bir yanındaki 10’un
-                    üzerinde üniversiteden; yazılım, finans, hukuk vb. alanlarda
-                    blockchain ile ilgili genç ve dinamik öğrencilerden oluşan
-                    topluluğumuzun kapsama alanını her geçen gün büyütüyoruz. Çeşitli
-                    şehirlerden toplanan arkadaşlarımızla her hafta çevrimiçi
-                    toplantılar yaparak birbirimizi bilgilendiriyor, kararlar alıyoruz.
+                    {{$t("plancontent")}}
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->
@@ -38,11 +29,9 @@
                   <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
-                  <h3>Eğitiyoruz</h3>
+                  <h3>{{$t("train")}}</h3>
                   <p>
-                  Gönüllüler olarak birleştiğimiz bu toplulukta bu teknolojiye ilgi
-                  duyan, bu konuda bilgi almak isteyen her öğrenciye yardım etmeye
-                  çalışıyoruz.
+                    {{$t("traincontent")}}
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->
@@ -51,10 +40,9 @@
                   <i class="fa fa-code" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
-                  <h3>Geliştiriyoruz</h3>
+                  <h3>{{$t("develop")}}</h3>
                   <p>
-                    Hem kendimizi geliştirmek hem de blockchain ekosistemine katkı
-                    sağlamak için bu alanda projeler geliştiriyoruz.
+                    {{$t("developcontent")}}
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->
@@ -64,11 +52,9 @@
                   <i class="fa fa-pencil" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
-                  <h3>İçerik Üretiyoruz</h3>
+                  <h3>{{$t("content")}}</h3>
                   <p>
-                    Blockchain alanında Türkçe kaynak eksikliğini hem yabancı kaynakları
-                    Türkçeleştirerek hem de özgün Türkçe içerikler üreterek gidermeye
-                    çalışıyoruz.
+                    {{$t("contentcontent")}}
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->
@@ -77,10 +63,9 @@
                   <i class="fa fa-rocket" aria-hidden="true"></i>
                 </div><!--feature-icon end-->
                 <div class="feature-info">
-                  <h3>Destekliyoruz</h3>
+                  <h3>{{$t("support")}}</h3>
                   <p>
-                    Üniversitelerdeki blockchain kulüpleri ile iletişim halinde
-                    olarak onların ihtiyaçları doğrultusunda teknik destek sağlıyoruz.
+                    {{$t("supportcontent")}}
                   </p>
                 </div><!--feature-info end-->
               </div><!--our-features end-->
