@@ -1,4 +1,7 @@
 {
+  "mainpage":"Home Page",
+  "about":"About",
+  "projects":"Projects",
   "hello123" : "hello",
   "bye123" : "bye",
   "car" : "car | {count} cars"

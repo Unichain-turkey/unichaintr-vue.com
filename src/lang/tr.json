@@ -1,4 +1,10 @@
 {
+  "mainpage":"Ana Sayfa",
+  "about":"Hakkımızda",
+  "projects":"Projeler",
+  "blog":"Blog",
+  "contact":"İletişim",
+
   "hello123" : "turkce",
   "bye123" : "er",
   "car" : "araba | {count} arabalar"

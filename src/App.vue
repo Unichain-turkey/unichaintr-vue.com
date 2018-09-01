@@ -47,11 +47,6 @@ export default {
     appFooter: Footer,
     appHeader: Header,
   },
-  data () {
-    return {
-      msg: 'Welcome to Vue+Vuex+Vuei18n'
-    }
-  },
   methods:{
     switchLang: function(lang){
       if (lang in this.$i18n.messages) {

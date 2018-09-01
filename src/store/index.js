@@ -44,7 +44,6 @@ export default new Vuex.Store({
       state.contractInstance = () => result
     },
     SETINFORMATION (state, result) {
-      console.log("in storage :",result)
       state.sponsorCount = result['0']
       state.pendingCount = result['1']
       state.limit = result['2']

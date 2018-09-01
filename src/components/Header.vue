@@ -10,11 +10,13 @@
         </div><!--mobile-menu-btn end-->
         <nav>
           <ul>
-            <li><a class="active" href="#" title="">Ana Sayfa</a></li>
-            <li><a href="#whoIam" title="">Hakkımızda</a></li>
-            <li><a href="#projects" title="">Projeler</a></li>
-            <li><a href="#blog" title="">Blog</a></li>
-            <li><a href="#knock-knock" title="">İletişim</a></li>
+            <li><a class="active" href="#" title="">{{ $t("mainpage") }}</a></li>
+            <li><a href="#whoIam" title="">{{ $t("about") }}</a></li>
+            <li><a href="#projects" title="">{{ $t("projects") }}</a></li>
+            <li><a href="#blog" title="">{{ $t("blog") }}</a></li>
+            <li><a href="#knock-knock" title="">{{ $t("contact") }}</a></li>
+            <li><i class="fa fa-language fa-lg" @click="switchLang" aria-hidden="true" style="color:white"></i></li>
+
 
           </ul>
         </nav><!--nav end-->
@@ -24,10 +26,13 @@
     <div class="responsive-mobile-menu">
       <a href="#" title="" class="close-menu"><i class="ion-close"></i></a>
       <ul @click="navigate">
-        <li><a class="active" href="#" title="">Ana Sayfa</a></li>
-        <li><a href="#whoIam" title="">Hakkımızda</a></li>
-        <li><a href="#projects" title="">Projeler</a></li><li><a href="#blog" title="">Blog</a></li>
-        <li><a href="#knock-knock" title="">İletişim</a></li>
+        <li><a class="active" href="#" title="">{{ $t("mainpage") }}</a></li>
+        <li><a href="#whoIam" title="">{{ $t("about") }}</a></li>
+        <li><a href="#projects" title="">{{ $t("projects") }}</a></li>
+        <li><a href="#blog" title="">{{ $t("blog") }}</a></li>
+        <li><a href="#knock-knock" title="">{{ $t("contact") }}</a></li>
+        <li><i class="fa fa-language fa-lg" @click="switchLang" aria-hidden="true" style="color:white"></i></li>
+
       </ul>
     </div><!--responsive-mobile-menu end-->
   </div>
@@ -39,7 +44,26 @@ export default {
   methods:{
     navigate:function () {
       //$(".responsive-mobile-menu").removeClass("active");
-    }
+    },
+    changelang: function(lang){
+      console.log("Change Language to "+lang)
+      if (lang in this.$i18n.messages) {
+        this.$i18n.locale = lang
+      } else {
+        this.loadLocaleMessage(lang, (err, message) => {
+          if (err) {
+            console.error(err)
+            return
+          }
+          i18n.setLocaleMessage(lang, message)
+          this.$i18n.locale = lang
+        })
+      }
+    },
+    switchLang: function(){
+      (this.$i18n.locale == "en") ? this.changelang("tr") : this.changelang("en");
+    },
+
 
   },
 
