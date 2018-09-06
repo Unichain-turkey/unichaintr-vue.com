@@ -1,22 +1,6 @@
 <template>
   <div id="app">
-    <!--
-   <h1>{{ msg }}</h1>
-   <span>
-   <h2>{{ $t("hello123") }}</h2>
-   <h2>{{ $t("bye123")}}</h2>
-   <p>{{ $tc('car') }}</p>
-   <p>{{ $tc('car', 10, { count: 10}) }}</p>
-   </span>
-   <h3>without Vuex</h3>
-   <button @click="switchLang('tr')">tr</button>
-   <button @click="switchLang('en')">en</button>
-   <br />
-   <h3>with Vuex</h3>
-   <button @click="setLang('tr')">tr</button>
 
-   <button @click="setLang('en')">en</button>
-   <br />
     -->
 
    <div class="page-loading">

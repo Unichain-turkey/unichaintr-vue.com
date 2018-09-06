@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {app} from '../main'
 
 import { ipfs ,web3Instance, contractInstance } from '@/common/coreinterface.js'
 
