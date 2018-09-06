@@ -1,8 +1,6 @@
 <template>
   <div id="app">
 
-    -->
-
    <div class="page-loading">
      <div class="thecube">
        <div class="cube c1"></div>
