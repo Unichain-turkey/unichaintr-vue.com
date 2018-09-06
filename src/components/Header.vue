@@ -15,7 +15,12 @@
             <li><a href="#projects" title="">{{ $t("projects") }}</a></li>
             <li><a href="#blog" title="">{{ $t("blog") }}</a></li>
             <li><a href="#knock-knock" title="">{{ $t("contact") }}</a></li>
-            <li><i class="fa fa-language fa-lg" @click="switchLang" aria-hidden="true" style="color:white"></i></li>
+            <li>
+            <div>
+              <img @click="switchLang"  v-bind:src="img"/>
+            </div>
+            </li>
+
 
 
           </ul>
@@ -31,7 +36,12 @@
         <li><a href="#projects" title="">{{ $t("projects") }}</a></li>
         <li><a href="#blog" title="">{{ $t("blog") }}</a></li>
         <li><a href="#knock-knock" title="">{{ $t("contact") }}</a></li>
-        <li><i class="fa fa-language fa-lg" @click="switchLang" aria-hidden="true" style="color:white">TR</i></li>
+        <li>
+          <div>
+            <img @click="switchLang"  v-bind:src="img"/>
+
+          </div>
+        </li>
 
       </ul>
     </div><!--responsive-mobile-menu end-->
@@ -41,12 +51,16 @@
 <script>
 export default {
   name: "Header",
+  data(){
+    return {
+      img:"http://cdn2.iconfinder.com/data/icons/flags/flags/32/Turkey.png",
+    }
+  },
   methods:{
     navigate:function () {
       //$(".responsive-mobile-menu").removeClass("active");
     },
     changelang: function(lang){
-      console.log("Change Language to "+lang)
       if (lang in this.$i18n.messages) {
         this.$i18n.locale = lang
       } else {
@@ -61,7 +75,15 @@ export default {
       }
     },
     switchLang: function(){
-      (this.$i18n.locale == "en") ? this.changelang("tr") : this.changelang("en");
+      console.log("asdasdasd")
+      if (this.$i18n.locale == "en") {
+        this.changelang("tr")
+        this.img="https://cdn2.iconfinder.com/data/icons/flags/flags/32/united-kingdom-great-britain.png"
+
+      }else{
+        this.changelang("en");
+        this.img="http://cdn2.iconfinder.com/data/icons/flags/flags/32/Turkey.png"
+      }
     },
 
 
@@ -72,5 +94,18 @@ export default {
 </script>
 
 <style scoped>
-
+  .flags {
+    width: 200px;
+    height: 32px;
+    /* sağa almak için "float: right;" kullanabilirsiniz*/
+    float: left;
+  }
+  .flags ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .flags ul li {
+    display: inline;
+  }
 </style>
