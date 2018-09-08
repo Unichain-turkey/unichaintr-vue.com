@@ -43,7 +43,7 @@
             <div class="col_one_fourth nobottommargin center col_last bounceIn animated" data-animate="bounceIn" data-delay="300">
               <i class="fa fa-coffee fa-3x" style="color:white; padding-bottom:10px"></i>
               <div style="color:white" class="counter counter-lined">
-                <span data-from="0" data-to="2" data-refresh-interval="30" data-speed="2700">4</span>
+                <span data-from="0" data-to="2" data-refresh-interval="30" data-speed="2700">5</span>
               </div>
               <h5 style="color:white; padding-bottom:10px">{{$t("event")}}</h5>
             </div>

@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Index from '@/components/Index'
-import ProjectDetail from '@/components/ProjectDetail'
 import Projects from '@/components/Projects'
 import Admin from '@/components/sponsor/Admin'
 import Demo from '@/components/sponsor/Demo'
@@ -42,11 +41,6 @@ let router = new Router({
       path: '/knock-knock',
       name: 'Contact',
       component: Contact
-    },
-    {
-      path: '/project/:name',
-      name: 'ProjectDetail',
-      component: ProjectDetail
     },
     {
       path: '/projects',

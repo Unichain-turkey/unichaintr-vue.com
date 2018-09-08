@@ -4,7 +4,7 @@
     <div class="container">
       <div class="building-gallery-tab">
         <div class="gallery-tabs-head">
-          <h4>"Projeler geliştiren, geliştirirken öğrenen ve öğrendiğini öğreten bir toplululuğuz."</h4>
+          <h4>"{{$t("motto")}}"</h4>
         </div><!--gallery-tabs-head end-->
         <div class="gallery-tab-contents">
           <div class="row ">

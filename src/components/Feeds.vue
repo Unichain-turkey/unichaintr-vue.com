@@ -52,7 +52,7 @@ export default {
     let that=this
     const request = axios({
       method: 'get',
-      url: 'http://46.101.182.159:3000/mediumDaily',
+      url: 'https://us-central1-unichainwebsite.cloudfunctions.net/posts',
     })
     request.then(function (res, err) {
       console.log(res.data)
